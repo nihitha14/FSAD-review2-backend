@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: careercompass-backend
+    runtime: docker
+    repo: https://github.com/nihitha14/FSAD-review2-backend.git
+    branch: main
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: APP_CORS_ALLOWED_ORIGINS
+        sync: false
